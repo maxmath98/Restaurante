@@ -1,0 +1,17 @@
+/* CSS geral */
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: #0c0b09;
+    color: #ececec;
+}
+a{
+    color: #cda45e;
+    text-decoration: none;
+}
+a:hover{
+    color: #d9ba85;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Playfair Display", serif;
+}
+
