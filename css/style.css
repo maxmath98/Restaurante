@@ -1,20 +1,30 @@
-/* CSS geral */
-body{
-    font-family: 'Open Sans', sans-serif;
+/*CSS Geral*/
+body {
+    font-family: "Opens Sans" sans-serif;
     background: #0c0b09;
     color: #ececec;
 }
-a{
+
+a {
     color: #cda45e;
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     color: #d9ba85;
+text-decoration: none;
 }
-h1,h2,h3,h4,h5,h6{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Playfair Display", serif;
 }
-#prealoader{
+
+#preloader {
     position: fixed;
     top: 0;
     left: 0;
@@ -24,29 +34,33 @@ h1,h2,h3,h4,h5,h6{
     overflow: hidden;
     background: #1a1814;
 }
-#preloader::before{
-    content:"";
+
+#preloader::before {
+    content: "";
     position: fixed;
     top: calc(50% - 30px);
     left: calc(50% - 30px);
     border: 6px solid #1a1814;
-    border-top-color:#cda45e;
+    border-top-color: #cda45e;
     border-bottom-color: #cda45e;
     border-radius: 50%;
     width: 60px;
     height: 60px;
     animation: animate-preloader 1s linear infinite;
 }
-@keyframes animate-preloader{
-    0%{
+
+@keyframes animate-preloader {
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+    
+  100% {
         transform: rotate(360deg);
     }
 }
-/* Back to top  button*/
-.back-to-top{
+
+/* back to top button */
+.back-to-top {
     position: fixed;
     visibility: hidden;
     opacity: 0;
@@ -57,40 +71,53 @@ h1,h2,h3,h4,h5,h6{
     height: 44px;
     border-radius: 50%;
     transition: all 0.4s;
-    border: 2px solid ;
+    border: 2px solid #cda45e;
 }
-.back-to-top i{
+
+.back-to-top i {
     font-size: 28px;
-    color:#cda45e;
+    color: #cda45e;
     line-height: 0;
 }
-.back-to-top:hover{
+
+.back-to-top:hover {
     background: #cda45e;
+color: #1a1814;
+}
+
+.back-to-top:hover i {
     color: #444;
 }
-.back-to-top.active{
+
+.back-to-top.active {
     visibility: visible;
     opacity: 1;
 }
-#topbar{
+
+/* Top Bar */
+#topbar {
     height: 40px;
     font-size: 14px;
     transition: all 0.5s;
     z-index: 996;
 }
-#topbar.topbar-scrolled{
+
+#topbar.topbar-scrolled {
     top: -40px;
 }
-#topbar .contact-info i{
+
+#topbar .contact-info i {
     font-style: normal;
     color: #d9ba85;
 }
-#topbar .contact-info i span{
+
+#topbar .contact-info i span {
     padding-left: 5px;
     color: #ececec;
 }
+
 /* header */
-#header{
+#header {
     background: rgba(12, 11, 9, 0.6);
     border-bottom: 1px solid rgba(12, 11, 9, 0.6);
     transition: all 0.5s;
@@ -98,13 +125,15 @@ h1,h2,h3,h4,h5,h6{
     padding: 15px 0;
     top: 40px;
 }
-#header.header-scrolled{
+
+#header.header-scrolled {
     top: 0;
     background: rgba(0, 0, 0, 0.85);
     border-bottom: 1px solid #37332a;
 }
-/* Logo em texto */
-#header.top{
+
+/* Logo em Texto */
+#header .logo {
     font-size: 28px;
     margin: 0;
     padding: 0;
@@ -112,18 +141,23 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-family: serif;
-     /* Font-family:"poppins",sans-serif */
+    font-family: "", serif;
+     /* font-family: "Poppins", sans-serif; */
 }
-#header.logo a{
+
+#header .logo a {
     color: #ececec;
     /* color: #cda45e; */
 }
-#header .logo img{
+
+/* Tamanho para logo em imagem */
+#header .logo img {
     max-height: 40px;
 }
-/* Botão Reservas = Book a table*/
-.book-a-table-btn{
+
+/* Botao Reservas = Book a table */
+
+.book-a-table-btn {
     margin: 0 0 0 15px;
     border: 2px solid #cda45e;
     color: #ececec;
@@ -135,17 +169,17 @@ h1,h2,h3,h4,h5,h6{
     letter-spacing: 1px;
     transition: 0.3s;
 }
-.book-a-table-btn:hover{
+
+.book-a-table-btn:hover {
     background: #cda45e;
     color: #ececec;
 }
-@media(max-width:992px){
-    .book-a-table-btn{
-        margin: 0 15px 0 0 ;
+
+@media (max-width: 992px) {
+    .book-a-table-btn {
+        margin: 0 15px 0 0;
         padding: 8px 20px;
     }
-
-}
 }
 
 /* Navegation Menu
@@ -172,7 +206,7 @@ h1,h2,h3,h4,h5,h6{
 .navbar a:focus {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 10px 0 10px 30px;
     color: #ececec;
     white-space: nowrap;
@@ -251,26 +285,30 @@ h1,h2,h3,h4,h5,h6{
     overflow-y: auto;
     transition: 0.3s;
 }
+
 .navbar-mobile a,
-.navbar-mobile a:focus{
+.navbar-mobile a:focus {
     padding: 10px 20px;
     font-size: 15px;
     color: #1a1814;
 }
+
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a{
+.navbar-mobile li:hover>a {
     color: #cda45e;
 }
 
-#hero{
+#hero {
     width: 100%;
     height: 100vh;
     background: url("../img/hero-bg.jpg");
+background-size: cover;
     position: relative;
     padding: 0;
 }
-#hero::before{
+
+#hero::before {
     content: "";
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -279,36 +317,42 @@ h1,h2,h3,h4,h5,h6{
     bottom: 0;
     left: 0;
 }
-#hero .container{
+
+#hero .container {
     padding-top: 110px;
 }
-@media(max-width:992px){
-    #hero.container{
+
+@media (max-width: 992px) {
+    #hero .container {
         padding-top: 98px;
     }
 }
-#hero h1{
+
+#hero h1 {
     margin: 0;
     font-size: 48px;
     font-weight: 700;
     line-height: 56px;
     color: #ececec;
-    font-family: "Poppins","Sans-serif";
+    font-family: "Poppins", sans-serif;
 }
-#hero h1 span{
+
+#hero h1 span {
     color: #cda45e;
 }
-#hero h2{
+
+#hero h2 {
     color: #ececec;
     margin-bottom: 10px 0 0 0;
     font-size: 22px;
-    /* background: brown; */
-}
-#hero.btns{
+    }
+
+#hero .btns {
     margin-top: 30px;
 }
-#hero.btn-menu,
-#hero.btn-book{
+
+#hero .btn-menu,
+#hero .btn-book {
     font-weight: 600;
     font-size: 13px;
     letter-spacing: 0.5px;
@@ -319,25 +363,29 @@ h1,h2,h3,h4,h5,h6{
     border: 2px solid #cda45e;
     line-height: 1;
     color: white;
-    transition: 0.3;
+    transition: 0.3s;
 }
+
 #hero .btn-menu:hover,
-#hero .btn-book:hover{
+#hero .btn-book:hover {
     background: #cda45e;
     color: #1a1814;
 }
-#hero .btn-book{
+
+#hero .btn-book {
     margin-left: 15px;
 }
-#hero.play-btn{
+
+#hero .play-btn {
     width: 94px;
     height: 94px;
-    background: radial-gradient(#cda45e 50%,rgba(205,164,94,0.4)52%);
+    background: radial-gradient(#cda45e 50%, rgba(205, 164, 94, 0.4) 52%);
     border-radius: 50%;
     display: block;
     position: relative;
     overflow: hidden;
 }
+
 #hero .play-btn::after {
     content: "";
     position: absolute;
@@ -420,6 +468,7 @@ h1,h2,h3,h4,h5,h6{
         font-size: 40px;
         line-height: 36px;
     }
+
     #hero h2 {
         font-size: 20px;
         line-height: 24px;
@@ -431,33 +480,40 @@ h1,h2,h3,h4,h5,h6{
         transform: scale(0.6, 0.6);
         opacity: 1;
     }
+
     100% {
         transform: scale(1, 1);
         opacity: 0;
     }
 }
-section{
-    padding: 60px;
+
+/* CSS Geral - Sections */
+section {
+    padding: 60px 0;
     overflow: hidden;
 }
-.section-bg{
+
+.section-bg {
     background: #1a1814;
 }
-.section-title{
+
+.section-title {
     padding-bottom: 40px;
 }
-.section-title h2{
+
+.section-title h2 {
     font-size: 14px;
-    font-weight:500;
+    font-weight: 500;
     padding: 0;
     line-height: 1px;
     margin: 0 0 5px 0;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #aaa;
-    font-family: "Poppins",sans-serif; 
+    font-family: "Poppins", sans-serif; 
 }
-.section-title h2::after{
+
+.section-title h2::after {
     content: "";
     width: 120px;
     height: 1px;
@@ -465,7 +521,8 @@ section{
     background: rgba(255, 255, 255, 0.2);
     margin: 4px 10px;
 }
-.section-title p{
+
+.section-title p {
     margin: 0;
     padding: 0;
     font-size: 36px;
@@ -474,34 +531,37 @@ section{
     color: #cda45e;
 }
 
-/*--------- Sobre = About ----------*/
+/*------ Sobre = About ------*/
 
-.about{
+.about {
     background: url("../img/about-bg.jpg") center center;
     background-size: cover;
     position: relative;
     padding: 80px 0;
 }
-.about::before{
+
+.about::before {
     content: "";
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     position: absolute;
     bottom: 0;
     top: 0;
     left: 0;
     right: 0;
 }
-.about .about-img{
+
+.about .about-img {
     position: relative;
-    transition: 0.5;
+    transition: 0.5s;
 }
 
-.about .about-img img{
+.about .about-img img {
     max-width: 100%;
     border: 4px solid rgba(255, 255, 255, 0.2);
     position: relative;
 }
-.about .about-img::before{
+
+.about .about-img::before {
     content: "";
     position: absolute;
     width: 60px;
@@ -513,7 +573,8 @@ section{
     border-top: 5px solid #cda45e;
     transition: 0.5s;
 }
-.about .about-img::after{
+
+.about .about-img::after {
     content: "";
     position: absolute;
     width: 60px;
@@ -525,80 +586,126 @@ section{
     border-bottom: 5px solid #cda45e;
     transition: 0.5s;
 }
-.about .about-img:hover{
-    transform:scale(1.03);
+
+.about .about-img:hover {
+    transform: scale(1.03);
 }
-.about .about-img:hover::before{
+
+.about .about-img:hover::before {
     left: 10px;
     top: 10px;
 }
-.about .about-img:hover::after{
+
+.about .about-img:hover::after {
     right: 10px;
     bottom: 10px;
 }
-.about .content{
+
+.about .content {
     position: relative;
 }
-.about .content h3{
+
+.about .content h3 {
     font-size: 26px;
     font-weight: 600;
 }
-.about .content ul{
+
+.about .content ul {
     list-style: none;
     padding: 0;
 }
-.about .content ul li{
+
+.about .content ul li {
     padding-bottom: 10px;
 }
-.about .content ul i{
+
+.about .content ul i {
     font-size: 20px;
     padding-right: 4px;
     color: #cda45e;
 }
-.about .content p:last-child{
-    margin-bottom:0;
+
+.about .content p:last-child {
+    margin-bottom: 0;
 }
-@media(min-width:1024px){
-    .about{
+
+@media (min-width: 1024px) {
+    .about {
         background-attachment: fixed;
     }
 }
 
-/* --------------- Why us ---------------- */
-.why-us .box{
+/* ---------------------- 
+# Why Us
+---------------------- */
+.why-us .box {
     padding: 50px 30px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     transition: all ease-in-out 0.3s;
     background: #1a1814;
 }
 
-.why-us .box span{
+.why-us .box span {
     display: block;
     font-size: 28px;
     font-weight: 700;
     color: #cda45e;
 }
-.why-us .box h4{
+
+.why-us .box h4 {
     font-size: 24px;
     font-weight: 600;
     padding: 0;
     margin: 20px 0;
     color: rgba(255, 255, 255, 0.8);
 }
-.why-us .box p{
+
+.why-us .box p {
     color: #aaa;
     font-size: 15px;
     margin: 0;
     padding: 0;
 }
-.why-us .box:hover{
+
+.why-us .box:hover {
     background: #cda45e;
     padding: 30px 30px 70px 30px;
     box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);   
 }
 
-.why-us .box:hover span
-.why-us .box:hover h4
+.why-us .box:hover span,
+.why-us .box:hover h4,
 .why-us .box:hover p{
     color: #ececec;
 }
+
+/* Menu Section */
+
+.menu #menu-filters {
+  padding: 0;
+  margin: 0 auto 0 auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+}
+
+.menu #menu-filters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 12px 10px 12px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #ececec;
+  font-family: "Playfair Display", serif;
+  transition: all ease-in-out 0.3s;
+  border-radius: 50px;
+  /* border: 1px solid #cda45e; */
+}
+
+.menu #menu-filters li:hover, 
+.menu #menu-filters li.filter-active {
+  color: #cda45e;
+}
+
