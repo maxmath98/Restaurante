@@ -629,7 +629,7 @@ section {
     margin-bottom: 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 320px) {
     .about {
         background-attachment: fixed;
     }
@@ -847,9 +847,10 @@ section {
     position: relative;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 320px) {
     .events {
         background-attachment: fixed;
+}
     }
 
     .events .events-carousel {
@@ -914,4 +915,4 @@ section {
         background: #cda45e;
     }
 
-}
+/* === reservas === */
